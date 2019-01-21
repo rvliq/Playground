@@ -106,8 +106,8 @@ namespace playground
         size_t m_itemCount;
     };
 
-    // Complier applies copy elision for this function. Only the single instance of vector class
-    // is created if function is called as: auto r = getValues<T>(count);
+    // Compiler applies return value optimization to this function. Only the single instance
+    // of vector class is created if function is called as: auto r = getValues<T>(count);
     template<typename T>
     vector<T> getValues(size_t count)
     {
